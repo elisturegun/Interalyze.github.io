@@ -1,19 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interalyze</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InterAlyze</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #1A1365, #d8b4fe);
+      color: #c7d2fe;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 80px 20px 40px;
+      text-align: center;
+      position: relative;
+      background: linear-gradient(to right, #1A1365 60%, #d8b4fe);
+    }
+
+    header img {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 80px;
+      height: auto;
+    }
+
+    header h1 {
+      font-size: 4.2rem;
+      font-weight: 800;
+      color: #c7d2fe;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      color: #c7d2fe;
+    }
+
+    .slogan {
+      margin-top: 40px;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .sub-slogan {
+      margin-top: 60px;
+      font-size: 1.5rem;
+      line-height: 2.4rem;
+      font-weight: 500;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #c7d2fe;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #f472b6;
+    }
+
+    section {
+      max-width: 960px;
+      margin: 50px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(199, 210, 254, 0.08);
+    }
+
+    .glow-heading {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #c7d2fe;
+      text-shadow:
+        0 0 8px #a78bfa,
+        0 0 16px #c084fc;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    ul li {
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    ul li strong {
+      color: #e9ccdc;
+    }
+
+    a {
+      color: #c7d2fe;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #d1d5db;
+      background: #1A1365;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header>
-    <h1>Interalyze</h1>
-    <p>Interview Analytics Platform</p>
+    <img src="assets/logo.png" alt="InterAlyze Logo" />
+    <h1>InterAlyze</h1>
+    <p></p>
+
+    <div class="slogan">From Interview to Insight<br/>Interalyze It.</div>
+    <div class="sub-slogan">
+      Analyze behavior<br />
+      Evaluate potential<br />
+      Hire better
+    </div>
   </header>
 
-  <!-- Navigation Bar -->
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
@@ -24,62 +163,57 @@
     </ul>
   </nav>
 
-  <!-- About Section -->
   <section id="about">
-    <h2>About Interalyze</h2>
-    <p>InterAlyze is a novel AI-driven job interview analytics platform that offers recruiters insights into the performance of candidates by analyzing verbal and non-verbal cues. The tool analyses online interview videos to gauge key behavioral benchmarks such as self-confidence level, personality traits, and attention metrics. InterAlyze uses NLP, computer vision, and audio processing to deliver an objective viewpoint to aid recruitment. By enhancing candidate evaluation, InterAlyze drastically reduces hiring time, minimizes human bias, and ensures companies select the best-fit talent.</p>
+    <h2 class="glow-heading">About InterAlyze</h2>
+    <p>
+      InterAlyze is a novel AI-driven job interview analytics platform that offers recruiters insights into the performance of candidates by analyzing verbal and non-verbal cues. The tool analyses online interview videos to gauge key behavioral benchmarks such as self-confidence level, personality traits, and attention metrics. InterAlyze uses NLP, computer vision, and audio processing to deliver an objective viewpoint to aid recruitment. By enhancing candidate evaluation, InterAlyze drastically reduces hiring time, minimizes human bias, and ensures companies select the best-fit talent.
+    </p>
   </section>
 
-  <!-- Features Section -->
-  <section id="features">
-    <h2>Features</h2>
-    <ul>
-      <li><strong>Speech-to-Text:</strong> Converts speech to text for analysis.</li>
-      <li><strong>Text Analysis:</strong> Emotional Tone, personality, and skill extraction.</li>
-      <li><strong>Visual Cues:</strong> Tracks gaze, expressions, and Body Language.</li>
-      <li><strong>Audio Analysis:</strong> Analyzes tone of speaker for the quality of the speech.</li>
-      <li><strong>Multi-Modal Analysis:</strong> Combines audio and visual analysis for a comprehensive candidate evaluation.</li>
-      <li><strong>Reports:</strong> Combines analysis into detailed candidate reports.</li>
-      <li><strong>Accountable:</strong> Hiring Decisions can be monitored for accountability.</li>
-      <li><strong>A Second Opinion:</strong> Reduces human bias by providing a second opinion during the hiring process.</li>
-    </ul>
-  </section>
+<section id="features">
+  <h2 class="glow-heading">Core Features</h2>
+  <ul>
+    <li><strong>🎙️ Speech-to-Text:</strong> Converts spoken answers into high-accuracy transcripts for downstream analysis.</li>
+    <li><strong>📚 Text Intelligence:</strong> Extracts emotional tone, personality traits (Big Five), and skill relevance using NLP.</li>
+    <li><strong>👁️ Visual Behavior Tracking:</strong> Monitors gaze direction, micro-expressions, and body language in real time.</li>
+    <li><strong>🔊 Audio Profiling:</strong> Analyzes vocal tone, pitch, and fluency to assess confidence and speaking clarity.</li>
+    <li><strong>🧬 Multi-Modal Fusion:</strong> Integrates visual, audio, and textual signals to deliver holistic behavioral insights.</li>
+    <li><strong>📊 Candidate Reports:</strong> Automatically generates structured reports with personalized analysis and charts.</li>
+    <li><strong>🧾 Transparent Hiring:</strong> Makes decisions reviewable by tracking the reasoning behind scores and flags.</li>
+    <li><strong>🌀 AI-Powered Second Opinion:</strong> Reduces human bias by offering data-backed decision support.</li>
+  </ul>
+</section>
 
-  <!-- Team Section -->
+
   <section id="team">
-    <h2>Meet Our Team</h2>
+    <h2 class="glow-heading">Meet the Team</h2>
     <ul>
       <li>Atilla Alp Yavuz</li>
       <li>Kemal Sarper Şahin</li>
-      <li>Öykü Elis Türegün - <a href="https://docs.google.com/document/d/1VMpCszfQ8tbjRZJJ_wbWMVnX90_HpGg-jRi-Ecivehw/edit?usp=sharing">Logbook</a></li>
-      <li>Tolgahan Arslan <a href="https://docs.google.com/document/d/1NskMckkTOPvZN1DWsok79jfQeysYaTUQMtCY0sfF_s4/edit?usp=sharing">Logbook</a></li></li>
+      <li>Öykü Elis Türegün – <a href="https://docs.google.com/document/d/1VMpCszfQ8tbjRZJJ_wbWMVnX90_HpGg-jRi-Ecivehw/edit">Logbook</a></li>
+      <li>Tolgahan Arslan – <a href="https://docs.google.com/document/d/1NskMckkTOPvZN1DWsok79jfQeysYaTUQMtCY0sfF_s4/edit">Logbook</a></li>
       <li>Tolga Artun Koçak</li>
     </ul>
   </section>
 
-  <!-- Resources Section -->
   <section id="resources">
-    <h2>Resources</h2>
+    <h2 class="glow-heading">Resources</h2>
     <ul>
-      <li><a href="https://docs.google.com/document/d/1lrhFkCBxjO0eyjGREgX2m-HVeP1crzlr/edit?usp=drive_link">Project Specification</a></li>
-      <li><a href="https://docs.google.com/document/d/1ZlHLuBVzbL5Km3kmlUMWoiQv-1ZglFfBQuNJ5vKonfE/edit?tab=t.0">Requirements Document</a></li>
+      <li><a href="https://docs.google.com/document/d/1lrhFkCBxjO0eyjGREgX2m-HVeP1crzlr/edit">Project Specification</a></li>
+      <li><a href="https://docs.google.com/document/d/1ZlHLuBVzbL5Km3kmlUMWoiQv-1ZglFfBQuNJ5vKonfE/edit">Requirements Document</a></li>
       <li><a href="CS491_DEMO.pdf" target="_blank">Demo Presentation (PDF)</a></li>
-      <li><a href="https://docs.google.com/document/d/1BcIov9L-7Tlh-x6iyEM1__7YtEE6xsjJqBviUAP7Tv8/edit?usp=sharing">Detailed Design Report</a></li>
-      <li><a href="https://docs.google.com/document/d/1qLESAtxayxtANy-ndfWGlnpQQPUw1MnX15xPniDrIAg/edit?usp=sharing">Final Report</a></li>
-      <li><a href="CS491_DEMO.pdf" target="_blank">Final Presentation (PDF)</a></li>
-      
+      <li><a href="https://docs.google.com/document/d/1BcIov9L-7Tlh-x6iyEM1__7YtEE6xsjJqBviUAP7Tv8/edit">Detailed Design Report</a></li>
+      <li><a href="https://docs.google.com/document/d/1qLESAtxayxtANy-ndfWGlnpQQPUw1MnX15xPniDrIAg/edit">Final Report</a></li>
     </ul>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact Us</h2>
+    <h2 class="glow-heading">Contact</h2>
     <p>Email: <a href="mailto:interalyze@gmail.com">interalyze@gmail.com</a></p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Interalyze. All Rights Reserved.</p>
+    <p>&copy; 2024 InterAlyze. All rights reserved.</p>
   </footer>
 </body>
 </html>
